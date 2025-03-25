@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - Mes Outils</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .tool-header {
+            background: linear-gradient(135deg, #6e48aa, #9d50bb);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .tool-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .tool-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .tool-image {
+            text-align: center;
+        }
+        
+        .tool-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tool-features {
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            color: #6e48aa;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tool-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="tool-header">
+        <div class="container">
+            <h1>Visual Studio Code</h1>
+            <p>L'éditeur de code polyvalent de Microsoft</p>
+        </div>
+    </header>
+    
+    <div class="tool-container">
+        <div class="tool-content">
+            <div class="tool-info">
+                <h2>Présentation</h2>
+                <p>Visual Studio Code (VS Code) est un éditeur de code source développé par Microsoft. Léger mais puissant, il est devenu un outil incontournable pour les développeurs grâce à son écosystème d'extensions.</p>
+                
+                <div class="tool-features">
+                    <h3>Fonctionnalités clés :</h3>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h4>Multi-langage</h4>
+                            <p>Support de nombreux langages (JavaScript, Python, Java, C++, etc.)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div>
+                            <h4>Extensions</h4>
+                            <p>Plus de 10 000 extensions disponibles pour personnaliser votre environnement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div>
+                            <h4>Intégration Git</h4>
+                            <p>Gestion des dépôts Git directement dans l'éditeur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://code.visualstudio.com/" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Site officiel
+                </a>
+            </div>
+            
+            <div class="tool-image">
+                <img src="../outil-images/visual-code.png" alt="Capture d'écran de VS Code">
+                <p class="img-caption">Interface de Visual Studio Code</p>
+            </div>
+        </div>
+        
+        <div class="tool-usage">
+            <h2>Mon utilisation</h2>
+            <p>Dans mes projets, j'utilise VS Code comme éditeur principal grâce à :</p>
+            <ul>
+                <li>Son débogueur intégré pour JavaScript et Python</li>
+                <li>Les extensions ESLint et Prettier pour un code propre</li>
+                <li>Live Server pour prévisualiser mes pages web</li>
+                <li>GitLens pour une meilleure gestion des versions</li>
+            </ul>
+            
+            <div class="screenshot-gallery">
+                <h3>Quelques extensions indispensables :</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../outil-images/vscode-ext1.jpg" alt="Extension ESLint">
+                        <p>ESLint</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../outil-images/vscode-ext2.jpg" alt="Extension Live Server">
+                        <p>Live Server</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="tool-footer">
+        <div class="container">
+            <a href="../index.html#outils" class="btn btn-outline">
+                <i class="fas fa-arrow-left"></i> Retour aux outils
+            </a>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>

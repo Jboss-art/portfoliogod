@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Techno - IA Générative</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Veille Technologique</h1>
+            <p class="subtitle">L'IA Générative révolutionne le développement web</p>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-switch">
+                <label for="theme-switch" class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+        </div>
+        <div class="header-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#impacts">Impacts</a></li>
+            <li><a href="#cas-pratiques">Cas pratiques</a></li>
+            <li><a href="#futur">Futur</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction" class="section-intro">
+            <div class="container">
+                <h2><i class="fas fa-robot"></i> L'Ère de l'IA Générative</h2>
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <p>L'IA générative représente une révolution dans la façon dont nous concevons, développons et interagissons avec la technologie. Ces systèmes capables de créer du contenu original - qu'il s'agisse de texte, d'images, de code ou même de musique - transforment fondamentalement le paysage du développement web.</p>
+                        <p>Contrairement aux IA traditionnelles conçues pour analyser ou classifier des données, les IA génératives produisent des outputs nouveaux et uniques, ouvrant des possibilités créatives sans précédent.</p>
+                        <button class="btn-primary" id="stats-btn">Voir les statistiques</button>
+                    </div>
+                    <div class="intro-image">
+                        <img src="https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="IA Générative" class="zoom-img">
+                        <div class="image-caption">Illustration d'un réseau de neurones génératifs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h3>Croissance du marché de l'IA Générative</h3>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="11.3">0</div>
+                        <div class="stat-label">Milliards $ (2023)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="51.8">0</div>
+                        <div class="stat-label">Milliards $ (2028)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="35.6">0</div>
+                        <div class="stat-label">% CAGR</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+                <p class="source">Source: MarketsandMarkets (2023)</p>
+            </div>
+        </section>
+
+        <section id="outils" class="section-tools">
+            <div class="container">
+                <h2><i class="fas fa-tools"></i> Les Principaux Outils</h2>
+                <div class="tools-carousel">
+                    <div class="carousel-container">
+                        <div class="tool-card active">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="GitHub Copilot">
+                            <h3>GitHub Copilot</h3>
+                            <p>Assistant de codage alimenté par OpenAI qui suggère du code en temps réel directement dans votre IDE.</p>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-code"></i> Développement</span>
+                                <span><i class="fas fa-rocket"></i> OpenAI</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1682686580391-615bd0548540?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="ChatGPT">
+                            <h3>ChatGPT</h3>
+                            <p>Modèle de langage avancé capable de générer du code, de la documentation et des solutions techniques.</p>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-comments"></i> Texte</span>
+                                <span><i class="fas fa-rocket"></i> OpenAI</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="DALL-E">
+                            <h3>DALL-E 3</h3>
+                            <p>Générateur d'images à partir de descriptions textuelles, utile pour les maquettes et assets visuels.</p>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-image"></i> Images</span>
+                                <span><i class="fas fa-rocket"></i> OpenAI</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Figma AI">
+                            <h3>Figma AI</h3>
+                            <p>Fonctionnalités IA intégrées à Figma pour générer des designs, des composants et des prototypes.</p>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-paint-brush"></i> Design</span>
+                                <span><i class="fab fa-figma"></i> Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-dots"></div>
+                        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impacts" class="section-impacts">
+            <div class="container">
+                <h2><i class="fas fa-chart-line"></i> Impacts sur le Développement Web</h2>
+                <div class="impacts-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Productivité Accrue</h3>
+                        <p>Les outils comme Copilot peuvent augmenter la vitesse de codage de 55% selon les études GitHub.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Prototypage Rapide</h3>
+                        <p>Génération instantanée de maquettes et de composants UI avec des outils comme Figma AI.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Debugging Intelligent</h3>
+                        <p>Identification et correction automatique des erreurs courantes dans le code.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Documentation Auto-générée</h3>
+                        <p>Création de docs techniques et de commentaires à partir du code source.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cas-pratiques" class="section-cases">
+            <div class="container">
+                <h2><i class="fas fa-laptop-code"></i> Cas Pratiques</h2>
+                <div class="case-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-btn">
+                            <span>Intégration avec VS Code</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-grid">
+                                <div class="accordion-text">
+                                    <p>GitHub Copilot s'intègre directement dans VS Code, offrant des suggestions contextuelles pendant que vous codez. Il analyse le code existant et les commentaires pour proposer des complétions pertinentes.</p>
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> Génération de fonctions complètes à partir de docstrings</li>
+                                        <li><i class="fas fa-check-circle"></i> Traduction de code entre langages</li>
+                                        <li><i class="fas fa-check-circle"></i> Suggestions d'optimisations</li>
+                                    </ul>
+                                </div>
+                                <div class="accordion-image">
+                                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="VS Code avec Copilot">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-btn">
+                            <span>Génération de Composants React</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-grid">
+                                <div class="accordion-text">
+                                    <p>Les IA peuvent générer des composants React fonctionnels à partir de descriptions textuelles, accélérant considérablement le développement front-end.</p>
+                                    <div class="code-example">
+                                        <div class="code-tabs">
+                                            <button class="code-tab active" data-tab="prompt">Prompt</button>
+                                            <button class="code-tab" data-tab="result">Résultat</button>
+                                        </div>
+                                        <div class="code-content">
+                                            <div class="code-pane active" id="prompt-pane">
+                                                <pre>Crée un composant React pour un bouton avec:
+- Style moderne avec gradient
+- Animation au hover
+- Props pour la couleur et la taille
+- Icône optionnelle</pre>
+                                            </div>
+                                            <div class="code-pane" id="result-pane">
+                                                <pre class="language-javascript"><code>const GradientButton = ({ 
+  children, 
+  color = '#6e48aa', 
+  size = 'medium',
+  icon 
+}) => {
+  const sizes = {
+    small: '0.75rem 1.5rem',
+    medium: '1rem 2rem',
+    large: '1.25rem 2.5rem'
+  };
+
+  return (
+    &lt;button
+      className="gradient-btn"
+      style={{
+        padding: sizes[size],
+        background: `linear-gradient(135deg, ${color}, #9d50bb)`
+      }}
+    >
+      {icon && &lt;span className="btn-icon">{icon}&lt;/span>}
+      {children}
+    &lt;/button>
+  );
+};</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-image">
+                                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Composant React">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-btn">
+                            <span>Création d'Assets Visuels</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-grid">
+                                <div class="accordion-text">
+                                    <p>Les outils comme DALL-E et Midjourney permettent de générer des images uniques pour les sites web sans avoir besoin de designer ou photographe.</p>
+                                    <div class="image-gallery">
+                                        <div class="gallery-item">
+                                            <img src="https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Image générée 1">
+                                            <p>"Site web moderne avec dégradé violet"</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Image générée 2">
+                                            <p>"Icône abstraite pour une app AI"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-image">
+                                    <img src="https://images.unsplash.com/photo-1682686580391-615bd0548540?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Création d'images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futur" class="section-future">
+            <div class="container">
+                <h2><i class="fas fa-crystal-ball"></i> Perspectives Futures</h2>
+                <div class="future-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023-2024</div>
+                        <div class="timeline-content">
+                            <h3>Intégration Native des IDE</h3>
+                            <p>Les assistants IA deviennent des composants standard des environnements de développement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025-2026</div>
+                        <div class="timeline-content">
+                            <h3>Développement par Prompt</h3>
+                            <p>Création d'applications complètes à partir de descriptions textuelles avec validation automatique.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2027+</div>
+                        <div class="timeline-content">
+                            <h3>Auto-maintenance du Code</h3>
+                            <p>Les systèmes IA gèrent les mises à jour, corrections et optimisations de façon autonome.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="future-chart">
+                    <canvas id="futureChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-newsletter">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-text">
+                        <h3><i class="fas fa-paper-plane"></i> Restez Informé</h3>
+                        <p>Abonnez-vous à notre newsletter pour recevoir les dernières actualités sur l'IA dans le développement web.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn-primary">S'abonner <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Veille Technologique</h4>
+                    <p>Exploration des innovations en IA générative et leur impact sur le développement web moderne.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-book"></i> Documentation</a></li>
+                        <li><a href="#"><i class="fas fa-tools"></i> Outils IA</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Statistiques</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> batolaalpha@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/godwin_alpha?igsh=MTdieXR1YnV3aDE1Yg%3D%3D&utm_source=qr"><i class="fab fa-twitter"></i>réseaux </a></li>
+                        <li><a href="https://github.com/Jboss-art"><i class="fab fa-github"></i> github</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Veille Technologique batola godwin. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
